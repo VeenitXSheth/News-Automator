@@ -30,8 +30,8 @@ generated API key into your project.
 ### Step Four
 
 Once everything has been configured, you can finally run the script. There are 2 options for how to run the script depending on what you would like to be produced. If you just want a
-short text summary with the article URL, title, author, and date published printed to the terminal, run 'python3 summarize.py'. You will see the article content, title, author, publishing date, 
-and summarized version from OpenAI printed to the terminal.
+short text summary with the article URL, title, author, and date published saved to a text file, run 'python3 summarize.py'. You will see the article content, title, author, publishing date, 
+and summarized version from OpenAI get saved to a .txt file along with getting printed to the terminal.
 
 If you would also like to get an mp3 file reading out the summarized news article, run 'python3 voiceover.py' instead. You will get all previous information plus an mp3 file with the title of
 the article that was summarized added to the project folder root. 
