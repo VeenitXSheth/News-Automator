@@ -1,7 +1,7 @@
 import openai
 from scrape import content
 
-api_key = "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"
+api_key = "REPLACE WITH YOUR OWN API KEY"
 
 openai.api_key = api_key
 
