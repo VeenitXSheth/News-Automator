@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import random
+import colorama
+from colorama import Fore
 
 urls = {
     "startups": "https://techcrunch.com/category/startups/",
@@ -13,8 +15,6 @@ urls = {
 
 scraping_url = random.choice(list(urls.values()))
 
-print("The URL chosen:", scraping_url)
-
 initial_request = requests.get(scraping_url)
 
 soup = BeautifulSoup(initial_request.content, "html.parser")
@@ -23,7 +23,6 @@ articles = []
 
 
 def scrape():
-    print("A scrape has started!")
     titles = soup.find_all("a", class_="post-block__title__link")
     for title in titles:
         articles.append(title["href"])
@@ -32,6 +31,6 @@ def scrape():
 scrape()
 
 chosen_topic = random.choice(articles)
-print("Chosen article URL:", chosen_topic)
+print(Fore.RED + "Chosen Article URL:", chosen_topic)
 
 articleURL = chosen_topic

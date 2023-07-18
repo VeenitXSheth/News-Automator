@@ -1,11 +1,15 @@
 from gtts import gTTS
 from summarize import chatCompletion
-from scrape import articleTitle
-from scrape import articleAuthor
+from scrape import author
+from scrape import file_name
+import colorama
+from colorama import Fore
 
-content = f"{articleTitle}. {chatCompletion.choices[0].message.content}. Written by {articleAuthor}"
+content = (
+    f"{file_name}. {chatCompletion.choices[0].message.content}. Written by {author} ago"
+)
 
 myobj = gTTS(text=content, lang="en", slow=False)
-myobj.save(f"{articleTitle}.mp3")
+myobj.save(f"{file_name}.mp3")
 
-# Issue with reciting author's name; it will add in random letters and symbols between characters; Fix will be added at some point
+print(Fore.YELLOW + "Voiceover Saved!")

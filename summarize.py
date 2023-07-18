@@ -1,5 +1,8 @@
 import openai
 from scrape import content
+import colorama
+from colorama import Fore
+from scrape import file_name
 
 api_key = "REPLACE WITH YOUR OWN API KEY"
 
@@ -10,4 +13,11 @@ chatCompletion = openai.ChatCompletion.create(
     messages=[{"role": "user", "content": f"Summarize this: {content}"}],
 )
 
-print("this is openai:", chatCompletion.choices[0].message.content)
+print(Fore.GREEN + "Summarized Version:", chatCompletion.choices[0].message.content)
+
+with open(f"{file_name}", "a") as f:
+    f.write(
+        f"""
+
+Summarized Version: {chatCompletion.choices[0].message.content}"""
+    )
