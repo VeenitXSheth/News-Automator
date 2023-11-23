@@ -11,12 +11,12 @@ For installation instructions, read below:
 First, fork this GitHub repository on your own account by clicking the 'Fork' button at the top of this page. From there, clone the repository from your own account to your local machine by using
 the 'git clone' command followed the repository link:
 
-'git clone https://github.com/YOUR_ACCOUNT/News-Automator'
+```'git clone https://github.com/YOUR_ACCOUNT/News-Automator'```
 
 ### Step Two
 
 Open the folder on your preferred code editor of choice and make sure you have Python 3 installed on your machine. If not, visit [python.org/install](https://www.python.org/downloads/).
-Now open the terminal at the destination of the folder or by using the integrated terminal in your code editor or IDE if provided. Run 'pip install requests bs4 openai gTTS' to install all the
+Now open the terminal at the destination of the folder or by using the integrated terminal in your code editor or IDE if provided. Run ```'pip install requests bs4 openai gTTS'``` to install all the
 project dependencies. 
 
 ### Step Three
@@ -30,7 +30,7 @@ generated API key into your project.
 ### Step Four
 
 Once everything has been configured, you can finally run the script. There are 2 options for how to run the script depending on what you would like to be produced. If you just want a
-short text summary with the article URL, title, author, and date published saved to a text file, run 'python3 summarize.py'. You will see the article content, title, author, publishing date, 
+short text summary with the article URL, title, author, and date published saved to a text file, run ```'python3 summarize.py'```. You will see the article content, title, author, publishing date, 
 and summarized version from OpenAI get saved to a .txt file along with getting printed to the terminal.
 
 If you would also like to get an mp3 file reading out the summarized news article, run 'python3 voiceover.py' instead. You will get all previous information plus an mp3 file with the title of
